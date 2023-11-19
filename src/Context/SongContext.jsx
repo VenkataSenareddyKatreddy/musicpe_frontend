@@ -3,12 +3,22 @@ import { createContext, useState, useRef } from "react";
 export const SongContext = createContext();
 
 export const SongContextState = ({ children }) => {
+  // let __URL__;
+  // if(document.domain === "localhost"){
+  //   __URL__ = "https://musicpe-backend-vndg.onrender.com"
+  // }else{
+  //   __URL__ = ""
+  // }
   let __URL__;
-  if(document.domain === "localhost"){
-    __URL__ = "https://musicpe-backend-vndg.onrender.com"
-  }else{
-    __URL__ = ""
-  }
+
+if (process.env.VERCEL_ENV === 'https://musicpe-backend-vndg.onrender.com') {
+  // Replace 'your-production-url' with your actual production URL
+  __URL__ = 'https://musicpe-backend-vndg.onrender.com';
+} else {
+  // Default to localhost for other environments
+  __URL__ = 'https://musicpe-backend-vndg.onrender.com';
+}
+
   const audio = new Audio();
   const song = {
     songUrl: "",
