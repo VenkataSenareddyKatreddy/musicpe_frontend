@@ -25,7 +25,7 @@ if (process.env.VERCEL_ENV === 'https://musicpe-backend-vndg.onrender.com') {
   __URL__ = 'https://musicpe-backend-vndg.onrender.com';
 } else {
   // Default to localhost for other environments
-  __URL__ = 'http://localhost:1337';
+  __URL__ = 'https://musicpe-backend-vndg.onrender.com';
 }
 
 
