@@ -12,12 +12,22 @@ const Register = () => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  let __URL__ ;
-  if ( document.domain === "localhost" ) {
-    __URL__ = "https://musicpe-backend-vndg.onrender.com";
-  } else {
-    __URL__ = "";
-  }
+  // let __URL__ ;
+  // if ( document.domain === "localhost" ) {
+  //   __URL__ = "https://musicpe-backend-vndg.onrender.com";
+  // } else {
+  //   __URL__ = "";
+  // }
+  let __URL__;
+
+if (process.env.VERCEL_ENV === 'https://musicpe-backend-vndg.onrender.com') {
+  // Replace 'your-production-url' with your actual production URL
+  __URL__ = 'https://musicpe-backend-vndg.onrender.com';
+} else {
+  // Default to localhost for other environments
+  __URL__ = 'https://musicpe-backend-vndg.onrender.com';
+}
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
