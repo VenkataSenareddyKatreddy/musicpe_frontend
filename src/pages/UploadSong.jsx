@@ -52,9 +52,7 @@ const UploadSong = () => {
       alert("File uploaded successfully");
       navigate("/explore");
     }
-    else{
-      alert("login to Upload");
-    }
+    
   };
 
   return (
