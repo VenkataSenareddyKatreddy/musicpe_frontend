@@ -132,7 +132,7 @@ const UploadSong = () => {
           type="submit"
           disabled={localStorage.getItem("access_token") ? false : true}
         >
-          Submit
+          Upload
         </button>
       </form>
     </div>
