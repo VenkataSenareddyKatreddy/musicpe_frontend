@@ -46,7 +46,7 @@ if (process.env.VERCEL_ENV === 'https://musicpe-backend-vndg.onrender.com') {
       alert("Login Successful");
       navigate('/')
     }else{
-      alert(data.message || "Something went wrong");
+      alert(data.message || "Invalid credentials");
     }
 
   }
